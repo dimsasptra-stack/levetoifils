@@ -1,15 +1,102 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lève-toi fils</title>
+    <title>LEVETOI FILS</title>
+    <style>
+        body {
+            margin: 0;
+            background: #0e0e0e;
+            color: #fff;
+            font-family: "Arial", sans-serif;
+        }
+        header {
+            height: 100vh;
+            background: url('foto.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px;
+            position: relative;
+        }
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+        }
+        .tagline {
+            font-size: 22px;
+            margin-bottom: 25px;
+            opacity: 0.85;
+        }
+        .cta {
+            padding: 12px 28px;
+            border: 1px solid #fff;
+            background: transparent;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: .2s;
+        }
+        .cta:hover {
+            background: #fff;
+            color: #000;
+        }
+        .section-title {
+            padding: 50px 20px 10px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 12px;
+            padding: 10px 20px 60px;
+        }
+        .product {
+            background: #1a1a1a;
+            padding: 10px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+        }
+        .product-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 8px 0 4px;
+        }
+        .product-price {
+            font-size: 13px;
+            opacity: .8;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 36px; }
+            .tagline {font-size: 18px;}
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Lève-toi fils</h1>
-    <p>Streetwear — Preorder 10–14 Hari</p>
-    <p>Harga: Rp 199.000</p>
-    <p>WhatsApp: +6283871408584</p>
-    <p>Instagram: @dimsasptra_</p>
-</body>
-</html>
+
+<header>
+    <div class="hero-content">
+        <h1>LEVETOI FILS</h1>
+        <p class="tagline">Not Born. Built.</p>
+        <a href="#shop" class="cta">Shop Now</a
