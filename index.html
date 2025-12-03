@@ -107,29 +107,44 @@
 <body>
 
 <!-- HERO (artistic) -->
-<section class="hero" aria-label="Hero">
-  <div class="hero-overlay">
-    <div style="display:inline-block; text-align:center; max-width:920px;">
-      <div class="brandname">Lève-toi fils</div>
-      <div class="tagline">Not Born. Built.</div>
+<section class="hero">
+    <img src="assets/shirt.png" alt="Lève-toi fils Tee" class="hero-image">
 
-      <div class="hero-ctas">
-        <!-- Shop scroll to catalog (we don't show price — user will DM) -->
-        <a class="btn btn-ghost" href="#catalog">Lihat Koleksi</a>
-
-        <!-- Primary CTA: red button to WhatsApp (prefilled message) -->
-        <a
-          class="btn btn-primary"
-          href="https://wa.me/6283871408584?text=Halo%20saya%20ingin%20preorder%20L%C3%A8ve-toi%20fils%20Tee%20(size%20M)%20-%20harap%20konfirmasi"
-          target="_blank"
-          rel="noopener"
-        >Order via WhatsApp</a>
-      </div>
-
-      <div class="hero-note">Pre-order 10–14 hari • Stok terbatas • Harga via DM</div>
+    <div class="order-box">
+        <a class="wa-order" href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20order%20Lève-toi%20fils%20tee">
+            Order via WhatsApp
+        </a>
     </div>
-  </div>
 </section>
+
+<style>
+.hero {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 380px;
+    display: block;
+    margin: 0 auto;
+}
+
+.order-box {
+    margin-top: 18px;
+}
+
+.wa-order {
+    display: inline-block;
+    padding: 14px 22px;
+    font-size: 16px;
+    background: #d4001b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+</style>
 
 <main>
   <!-- Product / model showcase -->
