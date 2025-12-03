@@ -3,110 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lève-toi, fils — Prologue Tee</title>
-
+<title>Lève-toi, fils</title>
 <style>
-    :root {
-        --muted:#cfcfcf;
-        --text:#fff;
-        --bg:#111;
-        --primary:#d9d9d9;
-    }
-
     body {
-        font-family: "Helvetica", sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
+        font-family: "Georgia", serif;
+        background: #111;
+        color: #eee;
+        line-height: 1.7;
+        padding: 40px;
+        max-width: 850px;
+        margin: auto;
+    }
+    h1 {
+        font-size: 36px;
+        color: #E0E0E0;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #444;
+        padding-bottom: 10px;
+    }
+    p {
+        font-size: 18px;
+        margin: 20px 0;
+        color: #ddd;
     }
 
-    header {
-        padding: 24px;
-        text-align: center;
-        font-size: 24px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    .hero {
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .headline {
-        font-size: 34px;
-        font-weight: 700;
-        margin-bottom: 8px;
-    }
-
-    .subtext {
-        max-width: 360px;
-        margin: 0 auto 26px;
-        font-size: 16px;
-        color: var(--muted);
-    }
-
-    .order-box {
-        margin-top: 18px;
-    }
-
-    .wa-order {
-        display: inline-block;
-        padding: 14px 22px;
-        font-size: 16px;
+    /* WhatsApp Floating Button */
+    .wa-float {
+        position: fixed;
+        bottom: 18px;
+        right: 18px;
+        background: #25D366;
+        padding: 10px 14px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
         text-decoration: none;
-        border: 1px solid var(--primary);
-        border-radius: 6px;
-        color: var(--text);
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+        z-index: 9999;
     }
-
-    .product-detail {
-        text-align: center;
-        font-size: 15px;
-        color: var(--muted);
-        margin-top: 18px;
+    .wa-float img {
+        width: 28px;
+        height: 28px;
     }
-
-    footer {
-        padding: 30px 20px;
-        text-align: center;
+    .wa-float span {
         font-size: 14px;
-        color: var(--muted);
-        border-top: 1px solid #222;
-        margin-top: 60px;
+        font-weight: 600;
+        color: #111;
     }
 </style>
-
 </head>
+
 <body>
+    <h1>Lève-toi, fils</h1>
 
-<header>Lève-toi, fils</header>
-
-<section class="hero">
-    <h1 class="headline">Not Born. Built.</h1>
-    <p class="subtext">
-        Streetwear yang menuntut aksi — bukan alasan.<br>
-        Koleksi pertama: Prologue Tee — “Lève-toi, fils.”
+    <p>
+        Keturunan bukan warisan tanpa aksi.
+    </p>
+    <p>
+        Menjadi “fils” — anak — bukan hanya lahir dari suatu garis, tetapi meneruskan nilai melalui tindakan.
+    </p>
+    <p>
+        Jika tidak, seseorang hanya pewaris nama, bukan pewaris makna.
+    </p>
+    <p>
+        Otoritas lahir dari keberanian untuk mengambil alih peran yang sudah menanti.
     </p>
 
-    <div class="order-box">
-        <a class="wa-order" href="https://wa.me/62XXXXXXXXXX?text=Saya%20mau%20order%20Prologue%20Tee">
-            Order via WhatsApp
-        </a>
-    </div>
-</section>
-
-<p class="product-detail">
-    Pre-order 10–14 hari • Size S/M/L/XL • Bahan 24s Cotton • Berat 230gr<br>
-    Harga: Rp199.000
-</p>
-
-<footer>
-    © 2025 Lève-toi, fils
-</footer>
-
+    <!-- WhatsApp Button -->
+    <a class="wa-float" href="https://wa.me/6283871408584" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <span>Chat Kami</span>
+    </a>
 </body>
 </html>
