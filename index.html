@@ -1,114 +1,120 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lève-toi fils</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: #eee;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lève-toi fils</title>
 
-        header {
-            text-align: center;
-            padding: 50px 20px;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #111;
+        color: #fff;
+        text-align: center;
+    }
 
-        h1 {
-            font-size: 38px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
+    header {
+        padding: 40px 0 20px;
+    }
 
-        .catalog {
-            display: flex;
-            flex-direction: column;
-            gap: 60px;
-            padding: 20px;
-        }
+    h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
 
-        .product {
-            text-align: center;
-        }
+    .catalog {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
 
-        .product-name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+    .product {
+        width: 45%;
+        border-radius: 12px;
+        padding: 20px;
+    }
 
-        .images {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
+    .product.black {
+        background: #f1f1f1; 
+        color: #000;
+    }
 
-        .images img {
-            width: 45%;
-            max-width: 300px;
-            border-radius: 10px;
-        }
+    .product.white {
+        background: #222;
+        color: #fff;
+    }
 
-        /* Background berbeda */
-        .black {
-            background: #fafafa;
-            color: #111;
-            padding: 40px 0;
-        }
+    .images img {
+        width: 100%;
+        max-width: 260px;
+        border-radius: 8px;
+        margin: 10px 0;
+    }
 
-        .white {
-            background: #000;
-            color: #fff;
-            padding: 40px 0;
-        }
+    .btn {
+        display: inline-block;
+        margin-top: 16px;
+        padding: 12px 22px;
+        background: #e62828;
+        color: #fff;
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 14px 28px;
-            background: #e72828;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-        }
+    .btn:hover {
+        opacity: 0.8;
+    }
 
-        .btn:hover {
-            opacity: 0.8;
-        }
-    </style>
+    footer {
+        margin-top: 40px;
+        opacity: .6;
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>Lève-toi fils</h1>
-    </header>
 
-    <section class="catalog">
+<header>
+    <h1>Lève-toi fils</h1>
+</header>
 
-        <!-- Black Product -->
-        <div class="product black">
-            <div class="product-name">Lève-toi fils — Black</div>
-            <div class="images">
-                <img src="images/black_front.png" alt="Black Front">
-                <img src="images/black_back.png" alt="Black Back">
-            </div>
-            <a class="btn" href="https://wa.me/6283871408584?text=Halo,%20saya%20minat%20produk%20Lève-toi%20fils%20Black">DM WhatsApp</a>
+<section class="catalog">
+
+    <!-- Produk Hitam -->
+    <div class="product black">
+        <h3>Lève-toi fils — Black</h3>
+        <div class="images">
+            <img src="images/black_front.png" alt="Black Product Front">
+            <img src="images/black_back.png" alt="Black Product Back">
         </div>
+        <a class="btn" href="https://wa.me/6283871408584?text=Saya%20ingin%20memesan%20L%C3%A8ve-toi%20fils%20-%20Black" target="_blank">
+            DM WhatsApp
+        </a>
+    </div>
 
-        <!-- White Product -->
-        <div class="product white">
-            <div class="product-name">Lève-toi fils — White</div>
-            <div class="images">
-                <img src="images/white_front.png" alt="White Front">
-                <img src="images/white_back.png" alt="White Back">
-            </div>
-            <a class="btn" href="https://wa.me/6283871408584?text=Halo,%20saya%20minat%20produk%20Lève-toi%20fils%20White">DM WhatsApp</a>
+    <!-- Produk Putih -->
+    <div class="product white">
+        <h3>Lève-toi fils — White</h3>
+        <div class="images">
+            <img src="images/white_front.png" alt="White Product Front">
+            <img src="images/white_back.png" alt="White Product Back">
         </div>
+        <a class="btn" href="https://wa.me/6283871408584?text=Saya%20ingin%20memesan%20L%C3%A8ve-toi%20fils%20-%20White" target="_blank">
+            DM WhatsApp
+        </a>
+    </div>
 
-    </section>
+</section>
+
+<footer>© 2025 Lève-toi fils</footer>
 
 </body>
 </html>
