@@ -1,40 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Lève-toi fils — Not Born. Built.</title>
-<link rel="icon" href="images/black-front.jpg" />
+<meta name="description" content="Lève-toi fils — Streetwear. Pre-order 10–14 hari. Order via WhatsApp." />
 <style>
   :root{
-    --bg:#0b0b0b;
-    --panel:#0f0f0f;
-    --muted:#bdbdbd;
-    --accent:#ffffff;
-    --max-width:1100px;
-    --gap:14px;
+    --bg:#ffffff;
+    --ink:#111111;
+    --muted:#666666;
+    --accent:#c2252d; /* merah aksen */
+    --panel:#f7f7f7;
+    --maxw:1100px;
   }
   *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--accent);
-    font-family: Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    line-height:1.4;
-  }
+  body{margin:0;font-family:Inter, system-ui, -apple-system, "Helvetica Neue", Arial; color:var(--ink); background:var(--bg); -webkit-font-smoothing:antialiased}
+  a{color:inherit}
 
-  /* HERO */
+  /* HERO: artistic white with rose+butterfly background */
   .hero{
-    min-height:72vh;
+    min-height:74vh;
     display:flex;
     align-items:center;
     justify-content:center;
     position:relative;
     overflow:hidden;
   }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: url('images/hero.jpg') center/cover no-repeat;
+    filter: contrast(.9) brightness(.98);
+    transform:scale(1.02);
+  }
+  .hero-overlay{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:48px 20px;
+    max-width:var(--maxw);
+  }
+  .brandname{
+    font-family: "Georgia", serif;
+    font-size:34px;
+    letter-spacing:1px;
+    color:#fff;
+    text-shadow:0 6px 30px rgba(0,0,0,0.55);
+    margin:0;
+  }
+  .tagline{
+    color:#fff;
+    opacity:0.95;
+    margin-top:10px;
+    font-size:18px;
+    text-shadow:0 6px 30px rgba(0,0,0,0.45);
+  }
+  .hero-ctas{margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:12px 18px;border-radius:6px;font-weight:700;text-decoration:none;font-size:14px;
+  }
+  .btn-primary{
+    background:var(--accent); color:#fff; border:2px solid rgba(0,0,0,0.02);
+    box-shadow:0 6px 20px rgba(0,0,0,0.18);
+  }
+  .btn-ghost{
+    background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.18);
+  }
+  .hero-note{color:rgba(255,255,255,0.88); margin-top:12px; font-size:13px}
+
+  /* MAIN content */
+  main{max-width:var(--maxw); margin:28px auto; padding:20px}
+  .section-title{font-family: "Georgia", serif; font-size:20px; margin:6px 0 12px}
+  .lead{color:var(--muted); font-size:15px; margin-bottom:18px; max-width:70ch}
+
+  /* product grid (model below hero) */
+  .grid {display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+  .card{background:var(--panel); border-radius:8px; overflow:hidden; border:1px solid rgba(0,0,0,0.04)}
+  .card .media{width:100%; height:0; padding-bottom:110%; background-position:center; background-size:cover}
+  .card .body{padding:14px}
+  .title{font-weight:700; margin:0 0 6px}
+  .meta{color:var(--muted); font-size:13px; margin-bottom:10px}
+  .small-note{font-size:13px; color:var(--muted)}
+
+  /* filosofi box */
+  .filosofi{margin-top:18px;padding:18px;border-radius:8px;background:#fff;border:1px solid rgba(0,0,0,0.03)}
+  .filosofi h3{margin:0 0 8px;font-family:Georgia,serif}
+  .filosofi p{margin:0;color:var(--muted);line-height:1.6}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+  .gallery img{width:100%;height:120px;object-fit:cover;border-radius:6px}
+
+  /* footer */
+  footer{padding:34px 20px;text-align:center;color:var(--muted);font-size:13px}
+
+  /* responsive */
+  @media (max-width:800px){
+    .grid{grid-template-columns:1fr}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+    .brandname{font-size:28px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO (artistic) -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-overlay">
+    <div style="display:inline-block; text-align:center; max-width:920px;">
+      <div class="brandname">Lève-toi fils</div>
+      <div class="tagline">Not Born. Built.</div>
+
+      <div class="hero-ctas">
+        <!-- Shop scroll to catalog (we don't show price — user will DM) -->
+        <a class="btn btn-ghost" href="#catalog">Lihat Koleksi</a>
+
+        <!-- Primary CTA: red button to WhatsApp (prefilled message) -->
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/6283871408584?text=Halo%20saya%20ingin%20preorder%20L%C3%A8ve-toi%20fils%20Tee%20(size%20M)%20-%20harap%20konfirmasi"
+          target="_blank"
+          rel="noopener"
+        >Order via WhatsApp</a>
+      </div>
+
+      <div class="hero-note">Pre-order 10–14 hari • Stok terbatas • Harga via DM</div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <!-- Product / model showcase -->
+  <h2 class="section-title">Latest Drop</h2>
+  <p class="lead">Lève-toi fils Tee — boxy fit, cotton combed, plastisol print. Batch awal terbatas — amankan melalui WhatsApp.</p>
+
+  <div id="catalog" class="grid" role="list">
+    <article class="card" role="listitem" aria-labelledby="p1">
+      <div class="media" style="background-image:url('images/black-front.jpg')" role="img" aria-label="Lève-toi fils Tee — Black"></div>
+      <div class="body">
+        <h3 id="p1" class="title">Lève-toi fils Tee — Black</h3>
+        <div class="meta">Boxy fit • Cotton combed (230gr) • Plastisol print • Size: S / M / L / XL</div>
+        <div style="display:flex;gap:10px">
+          <a class="btn btn-primary" href="https://wa.me/6283871408584?text=Halo%20saya%20ingin%20preorder%20L%C3%A8ve-toi%20fils%20Tee%20(Black)%20size%20M" target="_blank" rel="noopener">Order (WA)</a>
+          <a class="btn btn-ghost" href="https://instagram.com/lvtfls" target="_blank" rel="noopener">Lihat IG</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- second column: product detail / filosofi -->
+    <aside class="card" aria-labelledby="about">
+      <div class="body">
+        <h3 id="about" class="title">Detail & Filosofi</h3>
+        <div class="filosofi">
+          <h3>Singkat</h3>
+          <p>Hidupmu bukan milik penonton — berdirilah dan rebut kendalimu.</p>
+          <hr style="border:none;height:1px;background:rgba(0,0,0,0.04);margin:12px 0">
+          <h3>Padat</h3>
+          <p>“Lève-toi, fils” bukan sekadar nama — ini seruan: berhenti jadi pewaris tanpa aksi. Produk ini dibuat untuk yang memilih bergerak ketika diam bukan pilihan.</p>
+        </div>
+
+        <div style="margin-top:12px;">
+          <div class="small-note">Pre-order: 10–14 hari • Stok awal S/M/L/XL = 10 pcs each</div>
+          <div style="margin-top:10px">
+            <a class="btn btn-primary" href="https://wa.me/6283871408584?text=Halo%20saya%20mau%20konfirmasi%20stok%20L%C3%A8ve-toi%20fils%20Tee" target="_blank" rel="noopener">Cek Stok / Order</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Gallery -->
+  <div style="margin-top:20px">
+    <h3 class="section-title">Gallery</h3>
+    <div class="gallery" aria-hidden="false">
+      <img src="images/flat-grid.jpg" alt="Detail print closeup">
+      <img src="images/black-front.jpg" alt="Black front">
+      <img src="images/hero.jpg" alt="Hero artwork">
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div>Instagram: <a href="https://instagram.com/lvtfls" target="_blank" rel="noopener">@lvtfls</a> • WhatsApp: <a href="https://wa.me/6283871408584" target="_blank" rel="noopener">+62 838-7140-8584</a></div>
+  <div style="margin-top:8px">© <span id="y"></span> Lève-toi fils — Not Born. Built.</div>
+</footer>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+  </html>  }
   .hero::before{
     content:"";
     position:absolute;
